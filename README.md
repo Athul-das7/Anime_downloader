@@ -22,10 +22,11 @@ This is the link that you are expected to provide
 Please don't put the link from here
 ![alt text](https://github.com/Athul-das7/Anime_downloader/blob/main/Annotation%202020-12-16%20132908.jpg "wrong link")
 
-###Once you are done with it this is what you will see in your terminal....just place the link there and you are good to go
+### Once you are done with it this is what you will see in your terminal....just place the link there and you are good to go
+
 ![alt text](https://github.com/Athul-das7/Anime_downloader/blob/main/itsworking.jpg "End result")
 
-It will create a log file in the directory...Its better not messing with it however if you don't want to download few file you just add those episode numbers in the _log.txt_ file as follows
+It will create a log file in the directory...Its better not messing with it however if you don't want to download few file you just add those episode numbers in the log.txt file as follows
 ![alt text](https://github.com/Athul-das7/Anime_downloader/blob/main/Annotation%202020-12-16%20141813.jpg "Log file")
 
 Hope you have understood how it is to be used....any suggestion please let me know
