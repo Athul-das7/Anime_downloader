@@ -26,7 +26,8 @@ if confirm != 'y' and confirm != 'Y':
     print('\nAborting the Mission Boss!!!')
     exit()
 
-path = '/mnt/d/Anime/'+title                    #path for the file 
+filepath = '/mnt/d/Anime/'              #change the path to your choice
+path = filepath+title                    #path for the file 
 log = path+'/log.txt'                           #path for the log file
 
 try:                                            #to avoid the directory already exists error
