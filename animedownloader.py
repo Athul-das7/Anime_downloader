@@ -27,7 +27,8 @@ if confirm != 'y' and confirm != 'Y':
     exit()
 
 filepath = '/mnt/d/Anime/'              #change the path to your choice
-path = filepath+title                    #path for the file 
+
+path = filepath+title                  #path for the file 
 log = path+'/log.txt'                           #path for the log file
 
 try:                                            #to avoid the directory already exists error
