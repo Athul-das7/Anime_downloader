@@ -5,7 +5,8 @@ anime from 4anime.to and you are not just good to go but GREAT to go
 Hope this automation makes your life a lot easier
 '''
 
-import requests_html as req
+import sys
+from tqdm import tqdm
 from bs4 import BeautifulSoup
 import requests
 import os
@@ -72,11 +73,13 @@ for i in range(len(anime_links)):               #going through each link in anim
     down_path = path+'/'+aname                          #getting the name of the episode and updating the path
     print(f"\nDownloading {aname}...")
 
-    session = req.HTMLSession()                     #downloading the anime from the link
-    r = session.get(down_link)
+    filesize = int(requests.head(down_link).headers["Content-Length"])
+    chunk_size = 1024
 
-    with open(down_path, 'wb') as f:                #the file is being written and saved
-        f.write(r.content)
+    with requests.get(down_link, stream=True) as r, open(down_path,'wb') as f, tqdm( unit='B', unit_scale=True, unit_divisor=1024, total=filesize, file=sys.stdout ) as progress:
+        for chunk in r.iter_content(chunk_size= chunk_size):
+            datasize =f.write(chunk)
+            progress.update(datasize)
         with open(log,'a') as lg:
             lg.write(f"{episode_no}\n")             #updating the log file 
         print(f"Downloaded Episode{episode_no} of {title}!!!")
