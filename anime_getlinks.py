@@ -58,7 +58,7 @@ with open(log,"r") as f:
     #print(data)
 for i in range(len(anime_links)):
     episode_no=anime_links[i].split('/')[-2].split('-')[-1]
-    if episode_no in data: 
+    if episode_no in data:
         print(f"\nEpisode-{episode_no} of {title} already downloaded...skipping to the next one")
         continue
     while True:
